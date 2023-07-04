@@ -1,0 +1,8 @@
+.pagination{
+    opacity: 60%;
+    transition: opacity 0.6s cubic-bezier(0.075, 0.82, 0.165, 1), transform 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.pagination:hover{
+    opacity: 100;
+    transform: scale(1.3);
+}
