@@ -13,7 +13,7 @@ const Trending = () => {
     getPopular(pageNumber).then(res=>{
       setPopularMovies(res.data?.results);
     },[])
-  },[])
+  },[pageNumber])
   return (
     <div className='flex flex-col min-h-screen pt-[90px] w-full'>
      <h1 className='text-white text-4xl pb-4 text-center underline-offset-1'>Trending Movies</h1>
