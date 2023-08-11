@@ -20,19 +20,33 @@ const links = [
     },
 ]
 
-const Navbar = () => {
+const Navbar = ({toggle}) => {
   let path = window.location.pathname
   const navigate = useNavigate()
   return (
-    <div className='flex justify-around items-center space-x-6 w-full h-full'>
+  <div>
+      <div className='flex justify-around items-center space-x-6 w-full h-full '>
      {
         links.map(link => {
             return(
-                <p onClick={() => {navigate(link.path)}} key={link.path} className={`${path==link.path? 'text-[#77CAEE] font-light border-[#77CAEE]': 'text-white font-light border-transparent hover:text-gray-300'} border-b transition-all duration-150 cursor-pointer text-base tracking-[0.1em]`}>{link.module}</p>
+                <p onClick={() => {navigate(link.path)}} key={link.path} className={`${path==link.path? 'text-[#77CAEE] font-light border-[#77CAEE]': 'text-white font-light border-transparent hover:text-gray-300'} border-b transition-all duration-150 cursor-pointer text-base tracking-[0.1em] max-lg:hidden`}>{link.module}</p>
             )
         })
      }
+     
     </div>
+     <div className='flex flex-col justify-around items-center space-x-6 w-full h-full '>
+     {
+        links.map(link => {
+            return(
+                <p onClick={() => {navigate(link.path)}} key={link.path} className={`${path==link.path? 'text-[#77CAEE] font-light border-[#77CAEE]': 'text-white font-light border-transparent hover:text-gray-300'} py-4 hidden border-b transition-all duration-150 cursor-pointer text-base tracking-[0.1em] max-lg:block`}>{link.module}</p>
+            )
+        })
+     }
+     
+    </div>
+
+  </div>
   )
 }
 

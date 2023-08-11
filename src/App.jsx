@@ -4,6 +4,7 @@ import axios from './api/axios'
 import BarChart from './BarChart'
 import BubbleChart from './BubbleChart'
 import Header from './components/Header'
+import Footer from './components/Footer'
 import LineChart from './LineChart'
 import { routes } from './routes/routes'
 import Select from 'react-select'
@@ -113,7 +114,7 @@ function App() {
   //   </div>
   // )
   return (
-  <div className="min-h-screen flex justify-center items-center bg-background">
+  <div className="min-h-screen flex relative justify-center items-center bg-background">
     <div className="absolute top-0 w-full z-10">
       <Header />
     </div>
@@ -125,6 +126,8 @@ function App() {
         )
       })}
     </Routes>
+    <div className="absolute bottom-0 mt-2 bg-black w-full z-10">
+    </div>
   </div>
 )
 }

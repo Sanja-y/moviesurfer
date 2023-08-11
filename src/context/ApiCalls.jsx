@@ -46,7 +46,7 @@ export const ApiProvider = ({ children }) => {
         return axios.get(`/tv/popular?language=en-US&page=1`)
     }
     const searchShows = (query) => {
-        return axios.get(`/tv-movies?keyword=${query}&page=1`)
+        return axios.get(`/search-tv?keyword=${query}&page=1`)
     }
 
     const getShowDetails = (id) => {

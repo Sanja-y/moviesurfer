@@ -27,7 +27,12 @@ const TopRated = () => {
               })
             }
           </div>
-          <button onClick={()=>
+          
+    </div>
+   
+  )
+}
+{/* <button onClick={()=>
             {
                 setPageNumber(pageNumber+1);
                 getTopRated(pageNumber).then(res=>{
@@ -38,10 +43,5 @@ const TopRated = () => {
                 }
 
                 )
-            }} className='bg-buttonBg h-[38px] w-[123px] flex justify-center items-center transition-all duration-150 hover:scale-[1.1] text-white rounded-md hover:bg-sky-700'>Load More</button>
-    </div>
-   
-  )
-}
-
+            }} className='bg-buttonBg h-[38px] w-[123px] flex justify-center items-center transition-all duration-150 hover:scale-[1.1] text-white rounded-md hover:bg-sky-700'>Load More</button> */}
 export default TopRated

@@ -9,7 +9,7 @@ const Card = ({movie}) => {
   return (
     <div className="relative">
     <Button className={'absolute top-[43%] right-[45%] bg-buttonBg h-[38px] w-[123px] flex justify-center items-center transition-all duration-150 hover:scale-[1.1] text-white rounded-md hover:bg-sky-700'} text={'Learn more'}/>
-    <div onClick={() => {navigate('/movies/'+movie?.id)}} className='h-[313px] mb-8 cursor-pointer w-[255px] flex-col p-2 flex items-center justify-center bg-[#AEAEAE] relative group transition-all duration-200 hover:scale-[1.1] hover:opacity-40'>
+    <div onClick={() => {if(movie?.title) navigate('/movies/'+movie?.id); else navigate('/tv/'+movie?.id)}} className='h-[313px] mb-8 cursor-pointer w-[255px] flex-col p-2 flex items-center justify-center bg-[#AEAEAE] relative group transition-all duration-200 hover:scale-[1.1] hover:opacity-40'>
         <img className='h-full w-full object-cover'
         src={imageHost+movie?.poster_path} alt="movie-poster" />
     <div className="absolute  mx-2 w-[94%] bg-blend-overlay mix-blend-normal flex items-center justify-center text-white bg-[#383838] h-[40%] bottom-2">
