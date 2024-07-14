@@ -3,7 +3,7 @@ import  useApi from '../../hooks/useApi'
 import { imageHost } from '../../config/imagePath'
 import { useNavigate, useParams } from 'react-router-dom'
 import Card from '../../common-components/Card'
-
+//The highest trending TV shows are displayed.
 const TvSeries = () => {
   const {getPopularShows,} = useApi();
   const [popularShows, setPopularShows] = useState([]);

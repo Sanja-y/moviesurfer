@@ -7,6 +7,7 @@ import Card from '../../common-components/Card'
 import axios from 'axios'
 import useApi from '../../hooks/useApi'
 import { imageHost } from '../../config/imagePath'
+//The home-page of Moveesurfer. Here the top 5 of the highest trending movies are displayed.
 const Home = () => {
   const {getPopular} = useApi()
   const [suggested, setSuggested] = useState({})
@@ -39,7 +40,7 @@ const Home = () => {
                 <Rating rating={suggested?.vote_average}/>
               </div>
              </div>
-              <p className=' font-light text-base max-w-full xl:max-w-[50%]'>{suggested?.overview?.length<305? suggested?.overview: clicked ? suggested?.overview.substring(0,305)+'.....':suggested?.overview}</p>
+              <p className=' font-light text-base max-w-full xl:max-w-[80%]'>{suggested?.overview?.length<305? suggested?.overview: clicked ? suggested?.overview.substring(0,305)+'.....':suggested?.overview}</p>
               </div>
               <div className="flex w-[50%] justify-center items-center mt-6 mb-4">
                 <button onClick={()=>{setClicked(!clicked)}} className='bg-buttonBg h-[38px] w-[123px] flex justify-center items-center transition-all duration-150 hover:scale-[1.1] text-white rounded-md hover:bg-sky-700'>{clicked ? "Read More": "Read Less"}</button>

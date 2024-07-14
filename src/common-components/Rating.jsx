@@ -7,7 +7,7 @@ const Rating = ({size,rating}) => {
     total?.map(rate => {
       if(rating){
         return(
-            <i key={rate} className={`fa px-1.5 ${rating >= rate ? 'fa-star': rating >= rate - 0.5? 'fa-star-half-o': 'fa-star-o'} text-sky-300 ${size=='small'?' text-base':'text-3xl'}`}></i>
+            <i key={rate} className={`fa px-1.5 ${rating >= rate ? 'fa-star': rating >= rate - 0.5? 'fa-star-half-o': 'fa-star-o'} text-sky-300 ${size=='small'?' text-base':'text-3xl'} pb-8 text-left`}></i>
         )
       }
     })

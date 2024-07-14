@@ -23,7 +23,7 @@ const MovieDetails = () => {
   const [platforms, setPlatforms] = useState([])
   const [similar, setSimilar] = useState([])
   let text = 'In the 1950s, truck driver Frank Sheeran gets involved with Russell Bufalino and his Pennsylvania crime family. As Sheeran climbs the ranks to become a top hit man, he also goes to work for Jimmy Hoffa -- a powerful Teamster tied to organized crime.'
-
+  //To display the details of requested movie
   const fetchTrailer = () => {
     getTrailer(params.id).then(res => setTrailerLink(res.data?.trailer)).catch(err => console.log(err))
   }

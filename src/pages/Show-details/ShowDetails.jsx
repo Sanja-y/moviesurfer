@@ -6,7 +6,7 @@ import Genre from '../../common-components/Genre'
 import Details from '../../components/Details'
 import Review from '../../components/Review'
 
-
+  //To display the details of requested TV show.
 const ShowDetails = () => {
     const { getShowDetails, getShowReviews} = useApi();
     const params = useParams();

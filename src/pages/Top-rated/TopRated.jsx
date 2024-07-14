@@ -4,6 +4,7 @@ import { imageHost } from '../../config/imagePath'
 import { useNavigate, useParams } from 'react-router-dom'
 import Card from '../../common-components/Card'
 
+//To fetch and display the highest rated movies
 
 const TopRated = () => {
   const {getTopRated} = useApi();

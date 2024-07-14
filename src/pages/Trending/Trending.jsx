@@ -4,7 +4,7 @@ import { imageHost } from '../../config/imagePath'
 import { useNavigate, useParams } from 'react-router-dom'
 import Card from '../../common-components/Card'
 import "./Trending.css"
-
+//The highest trending movies are displayed.
 const Trending = () => {
   const {getPopular} = useApi();
   const [popularMovies, setPopularMovies] = useState([]);
